@@ -1,8 +1,13 @@
-import random
+from random import random
 
-N = int(input("Masukkan nilai N = "))
+data = int(input("Masukkan nilai N = "))
+x = 0
 
-for x in range(1, N + 1):
-    a = random.uniform(0.0,0.5)
-    print(f"Data ke {x} -> ", a)
+for i in range(data):
+    data_random = random()
+    while True:
+        if data_random < 0.5:
+            print(f"Data ke {i + 1} =", data_random)
+        break
+
 print("Selesai")
