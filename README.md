@@ -65,3 +65,46 @@ Masukkan angka 0 untuk berhenti.
             break
     print(f"Bilangan terbesar adalah {max(list)}")
 ![image](https://user-images.githubusercontent.com/61907877/141790639-5cca5938-5a95-41e4-aa21-f9de156a93df.png)
+
+## program1.py
+Buat program sederhana dengan perulangan: program1.py. Seorang pengusaha menginvestasikan uangnya untuk memulai usahanya dengan modal awal 100 juta, pada bulan pertama dan kedua belum mendapatkan laba. pada bulan ketiga baru mulai mendapatkan laba sebesar 1% dan pada bulan ke 5, pendapatan meningkat 5%, selanjutnya pada bulan ke 8 mengalami penurunan keuntungan sebesar 2%, sehingga laba menjadi 3%. Hitung total keuntungan selama 8 bulan berjalan usahanya.
+1. Pertama - tama, Buatlah variable untuk modal awal, bulan, keuntungan, dan total keuntungan
+###
+    modal_awal = 100000000
+    bulan = 0
+    keuntungan = int()
+    total_keuntungan = int()
+2. Gunakan while loop dan pada saat diminta untuk menghitung total keuntungan selama 8 bulan
+###
+    while bulan < 8:
+        bulan += 1
+3. Dari soal deskriptif tersebut, terdapat bulan ketiga mendapatkan laba sebesar 1%, bulan kelima meningkat menjadi 5%, dan bulan kedelapan mengalami penurunan sebesar 2%
+###
+    while bulan < 8:
+        bulan += 1
+        if bulan == 3:
+            keuntungan = modal_awal * 1/100
+        if bulan == 5:
+            keuntungan = modal_awal * 5/100
+        if bulan == 8:
+            keuntungan = modal_awal * 2/100
+        print(f"Bulan ke-{bulan} =", keuntungan)
+4. Jumlahin semua hasil keuntungannya dari bulan 1 ke 8 dengan menggunakan '+='.
+###
+    modal_awal = 100000000
+    bulan = 0
+    keuntungan = int()
+    total_keuntungan = int()
+    while bulan < 8:
+        bulan += 1
+        if bulan == 3:
+            keuntungan = modal_awal * 1/100
+        if bulan == 5:
+            keuntungan = modal_awal * 5/100
+        if bulan == 8:
+            keuntungan = modal_awal * 2/100
+        total_keuntungan += keuntungan
+        print(f"Bulan ke-{bulan} =", keuntungan)
+
+    print("Total laba adalah", total_keuntungan)
+![image](https://user-images.githubusercontent.com/61907877/141794091-86c1a348-c314-4ede-9342-55bd5fe87aaf.png)
